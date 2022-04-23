@@ -4,7 +4,7 @@ a:link {
 }
 
 * li {
-  list-style: none;
+  list-style: square;
 }
 
 .container {
