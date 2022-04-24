@@ -2,8 +2,17 @@ $menu-back: #343a40;
 $menu-border: red;
 $footer-back: #343a40;
 $txt-color: white;
-$font: 'Montserrat', Calibri, sans-serif;
+$font: Garamond, Calibri, sans-serif;
 $font-size: 18px;
+
+
+@mixin font ($color: $txt-color, $size: $font-size) {
+    color: $color;
+    font-size: $size;
+    font-weight: bold;
+    font-family: $font;
+    text-transform: uppercase;
+}
 
 body {
     margin: 0;
@@ -23,18 +32,10 @@ header {
     border-bottom: 5px solid $menu-border;
 }
 
-@mixin font ($size: $font-size) {
-    font-size: $size;
-    font-weight: bold;
-    font-family: $font;
-    text-transform: uppercase;
-}
-
 .menu {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: $txt-color;
     background-color: $menu-back;
     height: 50px;
     @include font(18px);
@@ -58,6 +59,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    &--side{
+        width: 20%;
+            & li {
+                list-style: none;
+                @include font (black, 14px);
+            }
+    }
 }
 
 footer {

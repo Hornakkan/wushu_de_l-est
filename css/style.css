@@ -20,12 +20,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  color: white;
   background-color: #343a40;
   height: 50px;
+  color: 18px;
   font-size: 18px;
   font-weight: bold;
-  font-family: "Montserrat", Calibri, sans-serif;
+  font-family: Garamond, Calibri, sans-serif;
   text-transform: uppercase;
 }
 .menu--item {
@@ -48,6 +48,17 @@ header {
   align-items: center;
   justify-content: space-around;
 }
+.content--side {
+  width: 20%;
+}
+.content--side li {
+  list-style: none;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Garamond, Calibri, sans-serif;
+  text-transform: uppercase;
+}
 
 footer {
   display: flex;
@@ -56,9 +67,10 @@ footer {
   color: white;
   background-color: #343a40;
   border-top: 5px solid red;
-  font-size: 15px;
+  color: 15px;
+  font-size: 18px;
   font-weight: bold;
-  font-family: "Montserrat", Calibri, sans-serif;
+  font-family: Garamond, Calibri, sans-serif;
   text-transform: uppercase;
 }
 
