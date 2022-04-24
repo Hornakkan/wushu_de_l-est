@@ -3,6 +3,7 @@ $menu-border: red;
 $footer-back: #343a40;
 $txt-color: white;
 $font: 'Montserrat', Calibri, sans-serif;
+$font-size: 18px;
 
 body {
     margin: 0;
@@ -18,8 +19,15 @@ a:link {
     list-style: square;
 }
 
-.container-top {
+header {
     border-bottom: 5px solid $menu-border;
+}
+
+@mixin font ($size: $font-size) {
+    font-size: $size;
+    font-weight: bold;
+    font-family: $font;
+    text-transform: uppercase;
 }
 
 .menu {
@@ -29,10 +37,7 @@ a:link {
     color: $txt-color;
     background-color: $menu-back;
     height: 50px;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: $font;
-    text-transform: uppercase;
+    @include font(18px);
     &--item {
         display: flex;
         width: 150px;
@@ -55,18 +60,12 @@ a:link {
     justify-content: space-around;
 }
 
-.container-bottom {
-    border-top: 5px solid $menu-border;
-}
-
-.footer {
+footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
     color: $txt-color;
     background-color: $footer-back;
-    font-size: 15px;
-    font-weight: bold;
-    font-family: $font;
-    text-transform: uppercase;
+    border-top: 5px solid $menu-border;
+    @include font(15px);
 }
