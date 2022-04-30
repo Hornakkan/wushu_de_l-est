@@ -5,13 +5,39 @@ $txt-color: white;
 $font: Garamond, Calibri, sans-serif;
 $font-size: 18px;
 
-
 @mixin font ($color: $txt-color, $size: $font-size) {
     color: $color;
     font-size: $size;
     font-weight: bold;
     font-family: $font;
     text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 680px) {
+    .menu a:link {
+        @include font (white, 14px);
+    }
+    .menu--item a img {
+        width: 30px;
+        height: 30px;
+    }
+    .menu {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background: white;
+    }
+    header {
+        position:absolute;
+        height: 180px;
+        width: 120px;
+        border-radius: 20px;
+        background: $menu-back;
+    }
+    .content {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
 }
 
 body {
@@ -65,6 +91,15 @@ header {
                 list-style: none;
                 @include font (black, 14px);
             }
+    }
+    &--middle{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & img {
+            height: 800px;
+        }
     }
 }
 

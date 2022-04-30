@@ -1,3 +1,36 @@
+@media screen and (max-width: 680px) {
+  .menu a:link {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Garamond, Calibri, sans-serif;
+    text-transform: uppercase;
+  }
+
+  .menu--item a img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: white;
+  }
+
+  header {
+    position: absolute;
+    height: 180px;
+    width: 120px;
+    border-radius: 20px;
+    background: #343a40;
+  }
+
+  .content {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -58,6 +91,15 @@ header {
   font-weight: bold;
   font-family: Garamond, Calibri, sans-serif;
   text-transform: uppercase;
+}
+.content--middle {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content--middle img {
+  height: 800px;
 }
 
 footer {
