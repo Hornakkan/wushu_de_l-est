@@ -74,6 +74,11 @@ header {
 .menu--item img {
   width: 60px;
   margin-top: 10px;
+  transform: rotate(0deg);
+  transition: transform 1s ease-in-out;
+}
+.menu--item img:hover {
+  transform: rotate(360deg);
 }
 
 .content {

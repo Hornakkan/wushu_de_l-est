@@ -1,0 +1,14 @@
+$menu-back: #343a40;
+$menu-border: red;
+$footer-back: #343a40;
+$txt-color: white;
+$font: Garamond, Calibri, sans-serif;
+$font-size: 18px;
+
+@mixin font($color: $txt-color, $size: $font-size) {
+    color: $color;
+    font-size: $size;
+    font-weight: bold;
+    font-family: $font;
+    text-transform: uppercase;
+}

@@ -1,22 +1,9 @@
-$menu-back: #343a40;
-$menu-border: red;
-$footer-back: #343a40;
-$txt-color: white;
-$font: Garamond, Calibri, sans-serif;
-$font-size: 18px;
-
-@mixin font ($color: $txt-color, $size: $font-size) {
-    color: $color;
-    font-size: $size;
-    font-weight: bold;
-    font-family: $font;
-    text-transform: uppercase;
-}
+@import "./utils/variables";
 
 
 @media screen and (max-width: 680px) {
     .menu a:link {
-        @include font (white, 14px);
+        @include font(white, 14px);
     }
     .menu--item a img {
         width: 30px;
@@ -77,6 +64,11 @@ header {
         & img {
             width: 60px;
             margin-top: 10px;
+            transform: rotate(0deg);
+            transition: transform 1s ease-in-out;
+            &:hover {
+                transform: rotate(360deg);
+            }
         }
     }
 }
